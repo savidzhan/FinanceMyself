@@ -1,4 +1,4 @@
-package com.savijan.financemyself;
+package com.savijan.financemyself.Database;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;

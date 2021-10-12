@@ -43,18 +43,20 @@ dependencies {
     implementation 'com.j256.ormlite:ormlite-android:5.6'
 
 
-    //RecyclerView library
-    implementation 'com.androidx.support:recyclerview-v7:26.1.0'
-
-    //CardView library
-    implementation 'com.androidx.support:cardview-v7:23.3.+'
-
-    //Lombok library
-    compileOnly 'org.projectlombok:lombok:1.12.6'
-    annotationProcessor 'org.projectlombok:lombok:1.12.6'
-
-    //butterKnife library
-    implementation 'com.jakewharton:butterknife:8.6.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+//    //RecyclerView library
+////    implementation 'com.androidx.support:recyclerview-v7:26.1.0'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
+//
+//    //CardView library
+////    implementation 'com.androidx.support:cardview-v7:23.3.+'
+    implementation "androidx.cardview:cardview:1.0.0"
+//    //Lombok library
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+//
+//    //butterKnife library
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
 }
