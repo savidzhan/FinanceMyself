@@ -106,7 +106,7 @@ public class DatabaseManager {
         }
     }
 
-    private int deleteUser(String index) {
+    public int deleteUser(String index) {
 
         try{
             if(userItemDao == null) return -1;

@@ -98,6 +98,10 @@ public class MainActivity extends AppCompatActivity {
 
     List<UserItemDB> userItemDBList = new ArrayList<>();
 
+    public void presentToast(){
+        Toast.makeText(getApplicationContext(),"Save User",Toast.LENGTH_SHORT).show();
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

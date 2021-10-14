@@ -21,10 +21,13 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.List;
 
+import lombok.Getter;
+
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.viewHolder> {
 
     private List<UserItemDB> userItemDBList;
-    private Context mContext;
+
+    public Context mContext;
 
     public MyAdapter(List<UserItemDB> userItemDBList, Context context) {
         this.userItemDBList = userItemDBList;
@@ -77,7 +80,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.viewHolder> {
         return userItemDBList.size();
     }
 
-    private void presentAlertDelete(int absoluteAdapterPosition, String index) {
+    private void presentAlertDelete(int position, String index) {
 
         AlertDialog dialog = new AlertDialog.Builder(mContext)
                 .setTitle("Delete User")
@@ -86,9 +89,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.viewHolder> {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         DatabaseManager.getInstance(mContext).deleteUser(index);
-                        deleteUser
+                        deleteUser(position);
                     }
                 })
+                .setNegativeButton("No", null)
+                .create();
+        dialog.show();
+
+    }
+
+    private void deleteUser(int position) {
+
+        userItemDBList.remove(position);
+        notifyItemRemoved(position);
+        notifyItemChanged(position, userItemDBList.size());
 
     }
 
