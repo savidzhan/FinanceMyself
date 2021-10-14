@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         return DatabaseManager.getInstance(getApplicationContext()).getAllUsers();
     }
 
+
     private int addUserToDB(UserItemDB userItemDB) {
 
         int isSuccess;
